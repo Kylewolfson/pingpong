@@ -3,9 +3,9 @@ var pingPong = function(number) {
   var splitNumber = [];
   for(i=1; i <= number; i++){
     var replaceCounter = i;
-    if (replaceCounter % 15 === 0) {replaceCounter = "Ping-Pong"}
-    else if (replaceCounter % 5 === 0) {replaceCounter = "Pong"}
-    else if (replaceCounter % 3 === 0) {replaceCounter = "Ping"}
+    if (replaceCounter % 15 === 0) {replaceCounter = "<img src='ping-pong.jpg'>"}
+    else if (replaceCounter % 5 === 0) {replaceCounter = "<img src='pong.jpeg'>"}
+    else if (replaceCounter % 3 === 0) {replaceCounter = "<img src='ping.jpg'>"}
     splitNumber.push(replaceCounter);
   }
   return splitNumber;

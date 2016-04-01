@@ -1,3 +1,7 @@
 ul {
   margin-top: 2em;
 }
+img {
+  height: 75px;
+  width: auto;
+}
