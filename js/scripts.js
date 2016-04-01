@@ -15,12 +15,18 @@ var pingPong = function(number) {
 $(document).ready(function() {
   $("#inputForm").submit(function(event){
     event.preventDefault();
-    $("#output").text(""); //clears previous entry
+    $("[id*='output']").text(""); //clears previous entry
     number = parseInt($("#inputNumber").val());
     if (!(number >= 0)) {alert("please enter a positive number");}
     outputArray = pingPong(number);
-    for (var i = 0; i < outputArray.length; i++) {
-      $("#output").append("<li>" + outputArray[i] + "</li>");
+    for (var i = 0; i < (Math.ceil(outputArray.length / 3)); i++) {
+      $("#outputCol1").append("<li>" + outputArray[i] + "</li>");
+    }
+    for (var i = (Math.ceil(outputArray.length / 3)); i < (Math.ceil(outputArray.length / 3 * 2)); i++) {
+      $("#outputCol2").append("<li>" + outputArray[i] + "</li>");
+    }
+    for (var i = (Math.ceil(outputArray.length / 3 * 2)); i < (outputArray.length); i++) {
+      $("#outputCol3").append("<li>" + outputArray[i] + "</li>");
     }
   });
 });
